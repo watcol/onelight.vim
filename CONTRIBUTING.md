@@ -1,4 +1,4 @@
-If you wish to contribute to enhancing **vim-one**, please feel free to do so.
+If you wish to contribute to enhancing **onelight.vim**, please feel free to do so.
 Open a pull request and I'll be happy to review it.
 
 ## Adding support for a new language

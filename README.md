@@ -1,20 +1,26 @@
-![Logo][logo]
-
-Light and dark vim colorscheme, shamelessly stolen from atom (another
-excellent text editor). **One** supports *true colors* and falls back
-gracefully and automatically if your environment does not support this
-feature.
+# onelight.vim
+This is a fork version of [rakr/vim-one](https://github.com/rakr/vim-one),
+that aims to be optimized for light theme.
 
 ## Vim Airline theme
 
 Add the following line to your `~/.vimrc` or `~/.config/nvim/init.vim`
 
 ```vim
-let g:airline_theme='one'
+let g:airline_theme='onelight'
 ```
 
 As for the colorscheme, this theme comes with light and dark flavors.
 
+## Vim Lightline theme
+
+Add the following line to your `~/.vimrc` or `~/.config/nvim/init.vim`
+
+```vim
+let g:lightline.colorscheme='onelight'
+```
+
+As for the colorscheme, this theme comes with light and dark flavors.
 ## List of enhanced language support
 
 Pull requests are more than welcome here.
@@ -43,22 +49,18 @@ scheme.
 * Jade
 * PHP
 * Python
-* Switch to estilo in progress, not stable at all and does not reflect all the
-  capabilities of the current mainstream version
 
 
 ## Installation
 
-You can use your preferred Vim Package Manager to install **One**.
+You can use your preferred Vim Package Manager to install **onelight**.
 
 ## Usage
 
-**One** comes in two flavors: light and dark.
+**onelight** comes in two flavors: light and dark.
 
 ```vim
-colorscheme one
-set background=dark " for the dark version
-" set background=light " for the light version
+colorscheme onelight
 ```
 
 `set background` has to be called after setting the colorscheme, this explains
@@ -69,12 +71,11 @@ for the `Normal` highlight is defined.
 
 Some terminals do not support italic, cf. [#3][issue_3].
 
-If your terminal does support _italic_, you can set the `g:one_allow_italics` variable to 1 in your `.vimrc` or `.config/nvim/init.vim`:
+If your terminal does support _italic_, you can set the `g:onelight_allow_italics` variable to 1 in your `.vimrc` or `.config/nvim/init.vim`:
 
 ```vim
-set background=light        " for the light version
-let g:one_allow_italics = 1 " I love italic for comments
-colorscheme one
+let g:onelight_allow_italics = 1 " I love italic for comments
+colorscheme onelight
 ```
 
 iTerm2 can support italic, follow the instructions given in this [blog post by Alex Pearce](https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/).
@@ -102,9 +103,7 @@ if (empty($TMUX))
 endif
 
 
-set background=dark " for the dark version
-" set background=light " for the light version
-colorscheme one
+colorscheme onelight
 ```
 ### Tmux support
 To get true color working in tmux, ensure that the `$TERM` environment variable is set to `xterm-256color`. Inside the `.tmux.conf` file we need to override this terminal and also set the default terminal as 256 color.
@@ -133,30 +132,6 @@ I've tested the following setup on a Mac:
 * Neovim 0.1.4 and 0.1.5-dev
 * Vim 7.4.1952
 
-## Customising One without fork
-
-Following a request to be able to customise **one** without the need to fork,
-**one** is now exposing a public function to meet this requirement.
-
-After the colorscheme has been initialised, you can call the following function:
-
-```
-one#highlight(group, fg, bg, attribute)
-```
-
-* `group`: Highlight you want to customise for example `vimLineComment`
-* `fg`: foreground color for the highlight, without the '#', for example:
-  `ff0000`
-* `bg`: background color for the highlight, without the '#', for example:
-  `ff0000`
-* `attribute`: `bold`, `italic`, `underline` or any comma separated combination
-
-For example:
-
-```
-call one#highlight('vimLineComment', 'cccccc', '', 'none')
-```
-
 ## Contributors
 
 A special thank you to the following people
@@ -167,8 +142,6 @@ A special thank you to the following people
 * [Arthur Xavier](https://github.com/arthur-xavier): PureScript support
 * [keremc](https://github.com/keremc): Tip Vim true color support inside tmux
 * [jetm](https://github.com/jetm): C/C++ highlighting
-
-[logo]: screenshots/new-logo.png
 
 [issue_3]: https://github.com/rakr/vim-one/issues/3
 [issue_21]: https://github.com/rakr/vim-one/issues/21
