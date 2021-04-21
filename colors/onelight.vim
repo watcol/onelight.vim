@@ -33,6 +33,7 @@ let s:italic = ''
 if g:onelight_allow_italics == 1
   let s:italic = 'italic'
 endif
+" }}}
 
 if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " functions
@@ -286,7 +287,6 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   endfunction
 
   " }}}
-
 
   " Color definition --------------------------------------------------------{{{
   let s:mono_1 = ['#494b53', '23']
@@ -685,6 +685,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('perlSpecialString', s:hue_4,     '', '')
   call <sid>X('perlVarPlain',      s:hue_2,     '', '')
   call <sid>X('podCommand',        s:mono_3,    '', '')
+  " }}}
 
   " PHP highlighting --------------------------------------------------------{{{
   call <sid>X('phpClass',        s:hue_6_2, '', '')
@@ -817,7 +818,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " ALE (Asynchronous Lint Engine) highlighting -----------------------------{{{
   call <sid>X('ALEWarningSign', s:hue_6_2, '', '')
   call <sid>X('ALEErrorSign', s:hue_5,   '', '')
-
+  " }}}
 
    " Neovim NERDTree Background fix ------------------------------------------{{{
   call <sid>X('NERDTreeFile', s:syntax_fg, '', '')
@@ -837,6 +838,5 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " }}}
 
 endif
-"}}}
 
 " vim: set fdl=0 fdm=marker:
