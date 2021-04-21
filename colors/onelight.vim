@@ -820,6 +820,21 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('ALEErrorSign', s:hue_5,   '', '')
   " }}}
 
+  " Vim-lsp highlightings ---------------------------------------------------{{{
+  call <sid>X('LspError', s:hue_5, '', '')
+  call <sid>X('LspWarning', s:hue_6_2, '', '')
+  call <sid>X('LspInformation', s:hue_4, '', '')
+  call <sid>X('LspHint', s:hue_6_2, '', '')
+  call <sid>X('LspErrorVirtualText', s:hue_5, '', 'reverse')
+  call <sid>X('LspWarningVirtualText', s:hue_6_2, '', 'reverse')
+  call <sid>X('LspInformationVirtualText', s:hue_4, '', 'reverse')
+  call <sid>X('LspHintVirtualText', s:hue_6_2, '', 'reverse')
+  call <sid>X('LspErrorHighlight', s:hue_5, '', 'underline')
+  call <sid>X('LspWarningHighlight', s:hue_6_2, '', 'underline')
+  call <sid>X('LspInformationHighlight', s:hue_4, '', 'underline')
+  call <sid>X('LspHintHighlight', s:hue_6_2, '', 'underline')
+  " }}}
+
    " Neovim NERDTree Background fix ------------------------------------------{{{
   call <sid>X('NERDTreeFile', s:syntax_fg, '', '')
   " }}}
