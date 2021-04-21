@@ -25,12 +25,12 @@ if exists('g:colors_name')
 endif
 let g:colors_name = 'onelight'
 
-if !exists('g:one_allow_italics')
-  let g:one_allow_italics = 0
+if !exists('g:onelight_allow_italics')
+  let g:onelight_allow_italics = 0
 endif
 
 let s:italic = ''
-if g:one_allow_italics == 1
+if g:onelight_allow_italics == 1
   let s:italic = 'italic'
 endif
 
@@ -838,15 +838,5 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
 endif
 "}}}
-
-" Public API --------------------------------------------------------------{{{
-function! one#highlight(group, fg, bg, attr)
-  call <sid>XAPI(a:group, a:fg, a:bg, a:attr)
-endfunction
-"}}}
-
-if exists('s:dark') && s:dark
-  set background=dark
-endif
 
 " vim: set fdl=0 fdm=marker:
