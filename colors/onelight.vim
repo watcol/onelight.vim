@@ -322,6 +322,46 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
   " }}}
 
+  " Terminal Colors --------------------------------------------------------{{{
+  if has('nvim')
+    let g:terminal_color_0  = s:mono_1[0]
+    let g:terminal_color_1  = s:hue_5[0]
+    let g:terminal_color_2  = s:hue_4[0]
+    let g:terminal_color_3  = s:hue_6[0]
+    let g:terminal_color_4  = s:hue_2[0]
+    let g:terminal_color_5  = s:hue_3[0]
+    let g:terminal_color_6  = s:hue_1[0]
+    let g:terminal_color_7  = s:mono_3[0]
+    let g:terminal_color_8  = s:mono_2[0]
+    let g:terminal_color_9  = s:hue_5_2[0]
+    let g:terminal_color_10 = s:hue_4[0]
+    let g:terminal_color_11 = s:hue_6_2[0]
+    let g:terminal_color_12 = s:hue_2[0]
+    let g:terminal_color_13 = s:hue_3[0]
+    let g:terminal_color_14 = s:hue_1[0]
+    let g:terminal_color_15 = s:mono_4[0]
+  else
+    let g:terminal_ansi_colors = [
+    \ s:mono_1[0],
+    \ s:hue_5[0],
+    \ s:hue_4[0],
+    \ s:hue_6[0],
+    \ s:hue_2[0],
+    \ s:hue_3[0],
+    \ s:hue_1[0],
+    \ s:mono_3[0],
+    \ s:mono_2[0],
+    \ s:hue_5_2[0],
+    \ s:hue_4[0],
+    \ s:hue_6_2[0],
+    \ s:hue_2[0],
+    \ s:hue_3[0],
+    \ s:hue_1[0],
+    \ s:mono_4[0],
+    \]
+  endif
+  " }}}
+
   " Vim editor color --------------------------------------------------------{{{
   call <sid>X('Normal',       s:syntax_fg,     s:syntax_bg,      '')
   call <sid>X('bold',         '',              '',               'bold')
