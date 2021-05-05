@@ -601,16 +601,16 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Rust highlighting -------------------------------------------------------{{{
-  call s:h('rustExternCrate',          s:dark_red,  '', 'bold')
+  call s:h('rustExternCrate',          s:dark_red,  '', '')
   call s:h('rustIdentifier',           s:blue,      '', '')
   call s:h('rustDeriveTrait',          s:green,     '', '')
-  call s:h('SpecialComment',           s:dark_grey, '', '')
-  call s:h('rustCommentLine',          s:dark_grey, '', '')
-  call s:h('rustCommentLineDoc',       s:dark_grey, '', '')
-  call s:h('rustCommentLineDocError',  s:dark_grey, '', '')
-  call s:h('rustCommentBlock',         s:dark_grey, '', '')
-  call s:h('rustCommentBlockDoc',      s:dark_grey, '', '')
-  call s:h('rustCommentBlockDocError', s:dark_grey, '', '')
+  call s:h('SpecialComment',           s:dark_grey, '', s:italic)
+  call s:h('rustCommentLine',          s:dark_grey, '', s:italic)
+  call s:h('rustCommentLineDoc',       s:dark_grey, '', s:italic)
+  call s:h('rustCommentLineDocError',  s:dark_grey, '', s:italic)
+  call s:h('rustCommentBlock',         s:dark_grey, '', s:italic)
+  call s:h('rustCommentBlockDoc',      s:dark_grey, '', s:italic)
+  call s:h('rustCommentBlockDocError', s:dark_grey, '', s:italic)
   " }}}
 
   " man highlighting --------------------------------------------------------{{{
