@@ -51,6 +51,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " Color definition --------------------------------------------------------{{{
   let s:colors = onelight#get_colors()
 
+  let s:none = ['NONE', 'NONE']
   let s:dark_black = s:colors.dark_black
   let s:black = s:colors.black
   let s:dark_grey = s:colors.dark_grey
@@ -128,7 +129,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call s:h('Normal',       s:fg,           s:bg,          '')
   call s:h('bold',         '',             '',            'bold')
   call s:h('ColorColumn',  '',             s:cursor,      '')
-  call s:h('Conceal',      s:grey,         s:bg,          '')
+  call s:h('Conceal',      s:grey,         s:none,        '')
   call s:h('Cursor',       s:fg,           s:visual_grey, '')
   call s:h('CursorIM',     s:fg,           s:visual_grey, '')
   call s:h('CursorColumn', '',             s:cursor,      '')
