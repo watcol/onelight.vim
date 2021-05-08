@@ -142,7 +142,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call s:h('IncSearch',    s:yellow,       s:visual_grey, 'none')
   call s:h('LineNr',       s:grey,         '',            '')
   call s:h('CursorLineNr', s:fg,           s:cursor,      'none')
-  call s:h('MatchParen',   s:dark_red,     s:cursor,      'underline,bold')
+  call s:h('MatchParen',   s:dark_red,     s:none,        'underline')
   call s:h('Italic',       '',             '',            s:italic)
   call s:h('ModeMsg',      s:fg,           '',            '')
   call s:h('MoreMsg',      s:fg,           '',            '')
