@@ -624,10 +624,10 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Neovim Buildin LSP highlightings ----------------------------------------{{{
-  call s:h('LspDiagnosticsError',                s:dark_red, '', '')
-  call s:h('LspDiagnosticsWarning',              s:yellow,   '', '')
-  call s:h('LspDiagnosticsInformation',          s:green,    '', '')
-  call s:h('LspDiagnosticsHint',                 s:grey,     '', '')
+  call s:h('LspDiagnosticsDefaultError',         s:dark_red, '', '')
+  call s:h('LspDiagnosticsDefaultWarning',       s:yellow,   '', '')
+  call s:h('LspDiagnosticsDefaultInformation',   s:green,    '', '')
+  call s:h('LspDiagnosticsDefaultHint',          s:grey,     '', '')
   call s:h('LspDiagnosticsUnderlineError',       s:dark_red, '', 'underline')
   call s:h('LspDiagnosticsUnderlineWarning',     s:yellow,   '', 'underline')
   call s:h('LspDiagnosticsUnderlineInformation', s:green,    '', 'underline')
